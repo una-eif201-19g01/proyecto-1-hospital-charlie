@@ -1,0 +1,8 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/ProyectoHospital/.vs/ProyectoHospital/v16
+/ProyectoHospital-CHARLIE/.vs/ProyectoHospital-CHARLIE/v16
+/ProyectoHospital-CHARLIE/Debug
+/.vs
