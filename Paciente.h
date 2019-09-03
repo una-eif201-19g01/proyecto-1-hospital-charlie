@@ -9,8 +9,8 @@
 #include <iostream>
 #include <string>
 
-char const MASCULINO = 'M';
-char const FEMENINO = 'F';
+//char const MASCULINO = 'M';
+//char const FEMENINO = 'F';
 
 using namespace std;
 
