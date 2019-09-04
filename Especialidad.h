@@ -1,1 +1,6 @@
-#pragma once
+#ifndef ESPECIALIDAD_H
+#define ESPECIALIDAD_H
+
+
+
+#endif // !ESPECIALIDAD_H
