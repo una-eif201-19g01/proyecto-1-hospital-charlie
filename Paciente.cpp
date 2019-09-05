@@ -81,3 +81,18 @@ void Paciente::setPrioridadPaciente(string _prioridadPaciente)
 {
 	prioridadPaciente = _prioridadPaciente;
 }
+
+void Paciente::setFechaCirugia(string _fechaCirugia)
+{
+	fechaCirugia = _fechaCirugia;
+}
+
+void Paciente::setEstadoPaciente(bool _estadoPaciente)
+{
+	estadoPaciente = _estadoPaciente;
+}
+
+void Paciente::setGeneroPaciente(char _generoPaciente)
+{
+	generoPaciente = _generoPaciente;
+}

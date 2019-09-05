@@ -21,6 +21,8 @@ private:
 	char generoPaciente;
 public:
 	Paciente();
+	Paciente(string _cedula, string _nombre, string _dirrecion, string _patologia, string _tipoCirugia,
+			string _prioridadPaciente, string _fechaCirugia, bool _estadoPaciente, char _generoPaciente);
 	string getCedula();
 	string getNombre();
 	string getDireccion();
