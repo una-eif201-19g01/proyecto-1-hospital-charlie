@@ -7,6 +7,7 @@
 #include <sstream>
 
 #include "Paciente.h"
+#include "Especialidad.h"
 
 class Paciente;
 
@@ -14,15 +15,18 @@ class Medico
 {
 private:
 	string nombre;
-	//especialidad 
+	Especialidad especialidad;
 	vector<Paciente*> paciente;
 public:
 	Medico();
+	Medico(string nombre, Especialidad _especialidad,)
+	
 	void setNombre(string _nombre);
 	string getNombre();
-	string reporteMedico();
 	void agregarPaciente(Paciente*);
 	Paciente getPacientes();
+	
+	string reporteMedico();
 };
 
 #endif // !MEDICO_H

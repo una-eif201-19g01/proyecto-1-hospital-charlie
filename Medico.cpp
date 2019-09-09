@@ -16,6 +16,19 @@ string Medico::getNombre()
 	return nombre;
 }
 
+
+void Medico::agregarPaciente(Paciente* _paciente)
+{
+	paciente.push_back(_paciente);
+}
+
+Paciente Medico::getPacientes()
+{
+	tamano = paciente.size();
+	for (int i = 0; i < tamano; i++)
+		return paciente[i]->getNombre();
+}
+
 string Medico::reporteMedico()
 {
 	/*
