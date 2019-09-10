@@ -54,4 +54,5 @@ string Especialidad::toStringEspecialidades()
 	{
 		reporte << "[" << i+1 << "]:" << especialidades[i] << endl;
 	}
+	return reporte.str();
 }

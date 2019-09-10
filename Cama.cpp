@@ -7,10 +7,10 @@ Cama::Cama()
 	*paciente = new Paciente();
 }
 
-Cama::Cama(string _codigo, Paciente* _paciente)
-{
+Cama::Cama(string _codigo, Paciente* _paciente,bool disponible){
+
 	codigo = _codigo;
-	disponibilidad = false;
+	disponibilidad = disponible;
 	*paciente = _paciente;
 }
 

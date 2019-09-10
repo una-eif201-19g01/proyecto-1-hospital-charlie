@@ -10,7 +10,7 @@ private:
 	Paciente *paciente;
 public:
 	Cama();
-	Cama(string _codigo, Paciente* _paciente);
+	Cama(string _codigo, Paciente* _paciente,bool disponible);
 	~Cama();
 	
 	void setDisponibilidad(bool _disponibilidad);
@@ -20,7 +20,6 @@ public:
 	bool isDisponibilidad();
 	Paciente getPaciente();
 	void asignarLetraPabellon();
-
 	string toStringCama();
 };
 

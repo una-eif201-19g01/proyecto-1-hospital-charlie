@@ -41,6 +41,7 @@ public:
 	void setFechaCirugia(string _fechaCirugia);
 	void setEstadoPaciente(bool _estadoPaciente);
 	void setGeneroPaciente(char _generoPaciente);
+	std::string reportePaciente();
 };
 #endif // !1
 

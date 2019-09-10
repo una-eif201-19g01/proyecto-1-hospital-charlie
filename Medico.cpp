@@ -15,6 +15,19 @@ string Medico::getNombre()
 {
 	return nombre;
 }
+void Medico::setEspecialidad(Especialidad _especialidad) {
+	especialidad = _especialidad;
+}
+
+Especialidad Medico::getEspecialidad() {
+	return especialidad;
+}
+Paciente Medico::getPacientes()
+{
+	tamano = paciente.size();
+	for (int i = 0; i < tamano; i++)
+		return paciente[i]->getNombre();
+}
 
 
 void Medico::agregarPaciente(Paciente* _paciente)
@@ -22,12 +35,7 @@ void Medico::agregarPaciente(Paciente* _paciente)
 	paciente.push_back(_paciente);
 }
 
-Paciente Medico::getPacientes()
-{
-	tamano = paciente.size();
-	for (int i = 0; i < tamano; i++)
-		return paciente[i]->getNombre();
-}
+
 
 string Medico::reporteMedico()
 {
