@@ -6,6 +6,15 @@ Medico::Medico()
 
 }
 
+Medico::Medico(string nombre, Especialidad _especialidad){
+	nom = nombre;
+	especialidad = _especialidad;
+}
+
+Medico::~Medico(){}
+
+
+
 void Medico::setNombre(string _nombre)
 {
 	nombre = _nombre;

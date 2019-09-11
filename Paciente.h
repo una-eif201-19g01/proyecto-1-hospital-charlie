@@ -32,6 +32,7 @@ public:
 	string getFechaCirugia();
 	char getGeneroPaciente();
 	bool getEstadoPaciente();
+
 	void setCedula(string _cedula);
 	void setNombre(string _nombre);
 	void setDireccion(string _direccion);
@@ -41,6 +42,7 @@ public:
 	void setFechaCirugia(string _fechaCirugia);
 	void setEstadoPaciente(bool _estadoPaciente);
 	void setGeneroPaciente(char _generoPaciente);
+
 	std::string reportePaciente();
 };
 #endif // !1

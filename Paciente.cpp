@@ -96,3 +96,13 @@ void Paciente::setGeneroPaciente(char _generoPaciente)
 {
 	generoPaciente = _generoPaciente;
 }
+
+std::string Paciente::reportePaciente(){
+	string reporte;
+	reporte = "\n Reporte de los paciente: [" + getEstadoPaciente() + "]: ";
+	for (int paciente; paciente < reporte; paciente++) {
+		
+	}
+
+	return reporte;
+}

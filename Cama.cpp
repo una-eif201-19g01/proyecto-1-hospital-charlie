@@ -51,6 +51,10 @@ Paciente Cama::getPaciente()
 	return *paciente;
 }
 
+void Cama::asignarLetraPabellon(){
+
+}
+
 string Cama::toStringCama()
 {
 	stringstream reporte;
