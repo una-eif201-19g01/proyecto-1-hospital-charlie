@@ -2,19 +2,19 @@
 
 Especialidad::Especialidad()
 {
-	for (int i = 0; i < 10, i++)
+	for (int i = 0; i < 10; i++)
 		especialidades[i] = "TBA";
 }
 
 Especialidad::Especialidad(string _especialidad)
 {
-	for (int i = 0; i < 10, i++)
+	for (int i = 0; i < 10; i++)
 		especialidades[i] = _especialidad;
 }
 
 Especialidad::~Especialidad()
 {
-	for (int i = 0; i < 10, i++)
+	for (int i = 0; i < 10; i++)
 	{
 		delete especialidades[i];
 	}
@@ -23,13 +23,13 @@ Especialidad::~Especialidad()
 
 void Especialidad::setEspecialidades(string _especialidad)
 {
-	for (int i = 0; i < 10, i++)
+	for (int i = 0; i < 10; i++)
 		especialidades[i] = _especialidad;
 }
 
 string Especialidad::getEspecialidades()
 {
-	for (int i = 0; i < 10, i++)
+	for (int i = 0; i < 10; i++)
 		return especialidades[i];
 }
 

@@ -33,7 +33,7 @@ void Cama::setCodigo(string _codigo)
 
 void Cama::setPaciente(Paciente* _paciente)
 {
-	*pacitente=_paciente
+	*pacitente = _paciente;
 }
 
 string Cama::getCodigo()
