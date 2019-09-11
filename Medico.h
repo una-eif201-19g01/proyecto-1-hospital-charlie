@@ -20,7 +20,7 @@ private:
 public:
 	Medico();
 	Medico(string nombre, Especialidad _especialidad );
-		~Medico();
+	~Medico();
 	void setNombre(string _nombre);
 	void setEspecialidad(Especialidad);
 	string getNombre();
