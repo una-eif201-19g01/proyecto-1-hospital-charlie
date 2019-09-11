@@ -5,6 +5,5 @@
 using namespace std;
 class Interfaz{
 public:
-	interfaz();
-	int menu();
+	void menu();
 };

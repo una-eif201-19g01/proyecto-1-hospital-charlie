@@ -1,11 +1,7 @@
 #include"Interfaz.h"
 
-Interfaz::interfaz(){
-
-}
-
-int Interfaz::menu(){
-	int opcion;
+void Interfaz::menu(){
+	int opcion=0;
 	do {
 		system("cls");
 		cout << "Menu" << endl;
@@ -15,6 +11,7 @@ int Interfaz::menu(){
 		cout << "4. Pablellon" << endl;
 		cout << "5. Salir " << endl;
 		cout << "Ingresa la opcion" << endl;
+		cin >> opcion;
 
 		switch (opcion)
 		{
@@ -35,7 +32,7 @@ int Interfaz::menu(){
 			break;
 		}
 		default:
-			cout << respuesta << " es un numero invalido" <<endl;
+			cout << opcion << " es un numero invalido" <<endl;
 
 			break;
 		}
