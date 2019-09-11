@@ -5,7 +5,7 @@ Interfaz::interfaz(){
 }
 
 int Interfaz::menu(){
-	int opc;
+	int opcion;
 	do {
 		system("cls");
 		cout << "Menu" << endl;
@@ -14,8 +14,32 @@ int Interfaz::menu(){
 		cout << "3. Especialidad" << endl;
 		cout << "4. Pablellon" << endl;
 		cout << "5. Salir " << endl;
-		opc = validarOpc();
-	} while (rango(6, 0, opc));
-	return opc;
+		cout << "Ingresa la opcion" << endl;
+
+		switch (opcion)
+		{
+		case 1: {
+			break;
+		}
+		case 2: {
+			break;
+		}
+		case 3: {
+			break;
+		}
+		case 4: {
+			break;
+		}
+		case 5: {
+			cout << "Hasta Luego";
+			break;
+		}
+		default:
+			cout << respuesta << " es un numero invalido" <<endl;
+
+			break;
+		}
+	} while (opcion != 5);
+	return opcion;
 }
 
