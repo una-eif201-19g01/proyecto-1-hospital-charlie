@@ -17,6 +17,18 @@ Pabellon::Pabellon(int f,int c)
 
 Pabellon::~Pabellon()
 {
+	for (int i = 0; i < fila; i++) {
+		for (int j = 0; j < colum; j++) {
+			delete pabellon[i][j];
+		}
+	}
+	for (int i = 0; i < fila; i++) {
+		delete[]pabellon[i];
+
+	}
+
+	delete[]pabellon;
+
 }
 
 void Pabellon::setPabellon(Cama**)
