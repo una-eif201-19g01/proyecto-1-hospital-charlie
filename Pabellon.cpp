@@ -61,12 +61,36 @@ char Pabellon::vereficarGeneroPabellon()
 
 bool Pabellon::hayDisponibilidad()
 {
-	return false;
+	bool disponible;
+
+	for (int i = 0; i < fila; i++) {
+		for (int j = 0; j < colum; j++) {
+			if (pabellon[i][j]->isDisponibilidad() == true)
+				disponible = true;
+			else
+				disponible = false;
+		}
+	}
+	return disponible;
 }
 
 int Pabellon::totalDisponibilidad()
 {
-	
+	int contador;
+
+	for (int i = 0; i < fila; i++) {
+		for (int j = 0; j < colum; j++) {
+			if (pabellon[i][j]->isDisponibilidad() == true)
+				contador++;
+		}
+	}
+	return contador;
+}
+
+void Pabellon::setCamaEnPosicion(Cama* cama, int fila, int _columna)
+{
+	if (fila < fila && columna < colum)
+		pabellon[_fila][_columna] = _cama;
 }
 
 void Pabellon::cambiarPacienteCama()
