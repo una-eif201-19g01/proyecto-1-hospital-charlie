@@ -31,8 +31,13 @@ Pabellon::~Pabellon()
 
 }
 
-void Pabellon::setPabellon(Cama**)
+void Pabellon::setPabellon(Cama**_cama)
 {
+	for (int i = 0; i < fila; i++)
+		for (int j = 0; j < colum; j++)
+		{
+			pabellon[i][j] = **_cama;
+		}
 }
 
 Cama Pabellon::getPabellon()
