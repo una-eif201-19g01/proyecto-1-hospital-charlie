@@ -13,7 +13,7 @@ public:
 	Pabellon(int,int);
 	~Pabellon();
 
-	void setPabellon(Cama*);
+	void setPabellon(string);
 	Cama getPabellon();
 
 	char vereficarGeneroPabellon();
