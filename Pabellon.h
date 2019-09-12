@@ -19,7 +19,7 @@ public:
 	char vereficarGeneroPabellon();
 	bool hayDisponibilidad();	
 	int totalDisponibilidad();
-	void cambiarPacienteCama();
+	void cambiarPacienteCama(paciente*);
 	string toStringPabellon();
 };
 
