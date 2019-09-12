@@ -49,7 +49,7 @@ char Pabellon::vereficarGeneroPabellon()
 {
 	for (int i = 0; i < fila; i++) {
 		for (int j = 0; j < colum; j++) {
-			if (pabellon[i][j] == "M") {
+			if (pabellon[i][j]->getPaciente()->getGeneroPaciente() == "M") {
 				return M;
 			}
 			else {
