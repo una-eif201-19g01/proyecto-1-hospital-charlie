@@ -1,17 +1,19 @@
 #include "Pabellon.h"
 
 Pabellon::Pabellon()
-{		fila=10
-		colum=20
+{
+	//pabellon = new Cama***;
+	fila = 10;
+	colum = 20;
 }
 
-Pabellon::Pabellon(int f,int c)
+Pabellon::Pabellon(int f, int c, Cama*** pabellon)
 {
 	fila = f;
 	colum = c;
-	pabellon = new cama * *[fila];
+	pabellon = new Cama * *[fila];
 	for (int i = 0; i < fila; i++) {
-		pabellon[i] = new cama * [colum];
+		pabellon[i] = new Cama * [colum];
 	}
 }
 
@@ -31,12 +33,12 @@ Pabellon::~Pabellon()
 
 }
 
-void Pabellon::setPabellon(Cama**_cama)
+void Pabellon::setPabellon(Cama** _cama)
 {
 	for (int i = 0; i < fila; i++)
 		for (int j = 0; j < colum; j++)
 		{
-			pabellon[i][j] = **_cama;
+			pabellon[i][j] = *_cama;
 		}
 }
 
@@ -47,13 +49,14 @@ Cama Pabellon::getPabellon()
 
 char Pabellon::vereficarGeneroPabellon()
 {
+
 	for (int i = 0; i < fila; i++) {
 		for (int j = 0; j < colum; j++) {
-			if (pabellon[i][j]->getPaciente()->getGeneroPaciente() == "M") {
-				return M;
+			if (pabellon[i][j]->getPaciente().getGeneroPaciente() == 'M') {
+				return 'M';
 			}
 			else {
-				return F;
+				return 'F';
 			}
 		}
 	}
@@ -76,7 +79,7 @@ bool Pabellon::hayDisponibilidad()
 
 int Pabellon::totalDisponibilidad()
 {
-	int contador;
+	int contador = 0;
 
 	for (int i = 0; i < fila; i++) {
 		for (int j = 0; j < colum; j++) {
@@ -87,13 +90,13 @@ int Pabellon::totalDisponibilidad()
 	return contador;
 }
 
-void Pabellon::setCamaEnPosicion(Cama* cama, int fila, int _columna)
+void Pabellon::setCamaEnPosicion(Cama* cama, int _fila, int _columna)
 {
-	if (fila < fila && columna < colum)
-		pabellon[_fila][_columna] = _cama;
+	if (_fila < fila && _columna < colum)
+		pabellon[_fila][_columna] = cama;
 }
 
-void Pabellon::cambiarPacienteCama()
+void Pabellon::cambiarPacienteCama(Paciente*)
 {
 }
 

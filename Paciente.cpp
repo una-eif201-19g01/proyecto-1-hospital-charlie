@@ -11,18 +11,13 @@ Paciente::Paciente(string _cedula, string _nombre, string _dirrecion, string _pa
 {
 	cedula = _cedula;
 	nombre = _nombre;
-	dirrecion = _dirrecion;
+	direccion = _dirrecion;
 	patologia = _patologia;
-	tipoCiru = _tipoCirugia;
-	prioriPac = _prioridadPaciente;
-	fechaCir = _fechaCirugia;
-	estado = _estadoPaciente;
-	genero = _generoPaciente;
-
-
-
-
-
+	tipoCirugia = _tipoCirugia;
+	prioridadPaciente = _prioridadPaciente;
+	fechaCirugia = _fechaCirugia;
+	estadoPaciente = _estadoPaciente;
+	generoPaciente = _generoPaciente;
 
 }
 
@@ -116,12 +111,8 @@ void Paciente::setGeneroPaciente(char _generoPaciente)
 	generoPaciente = _generoPaciente;
 }
 
-std::string Paciente::reportePaciente(){
+std::string Paciente::reportePaciente() {
 	string reporte;
-	reporte = "\n Reporte de los paciente: [" + getEstadoPaciente() + "]: ";
-	for (int paciente; paciente < reporte; paciente++) {
-		
-	}
-
+	reporte = "\n Reporte de los paciente: [" + getEstadoPaciente(); +"]: ";
 	return reporte;
 }

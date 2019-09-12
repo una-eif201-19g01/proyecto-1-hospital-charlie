@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -13,7 +14,7 @@ public:
 	Especialidad();
 	Especialidad(string _especialidad);
 	~Especialidad();
-	
+
 	void setEspecialidades(string _especialidad);
 	string getEspecialidades();
 

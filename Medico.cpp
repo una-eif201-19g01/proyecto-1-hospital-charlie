@@ -6,12 +6,14 @@ Medico::Medico()
 
 }
 
-Medico::Medico(string nombre, Especialidad _especialidad){
-	nom = nombre;
+Medico::Medico(string nombre, Especialidad _especialidad) {
+	this->nombre = nombre;
 	especialidad = _especialidad;
+	cantidad = 0;
+	//paciente = new  Paciente**[cantidad];
 }
 
-Medico::~Medico(){}
+Medico::~Medico() {}
 
 
 
@@ -31,13 +33,14 @@ void Medico::setEspecialidad(Especialidad _especialidad) {
 Especialidad Medico::getEspecialidad() {
 	return especialidad;
 }
+/*
 Paciente Medico::getPacientes()
 {
-	tamano = paciente.size();
+	int tamano = paciente.size();
 	for (int i = 0; i < tamano; i++)
-		return paciente[i]->getNombre();
+		//return paciente[i].getNombre();
 }
-
+*/
 
 void Medico::agregarPaciente(Paciente* _paciente)
 {
@@ -58,7 +61,7 @@ string Medico::reporteMedico()
 	stringstream _reporte;
 	int cantidadPacientes = paciente.size();
 
-	_reporte << "Nombre del medico: " << getNombre() << "\n" << "Especialidad: "<<especialidad->getEspecialidad()<< endl;
+	_reporte << "Nombre del medico: " << getNombre() << "\n" << "Especialidad: " << especialidad.getEspecialidades() << endl;
 
 	if (cantidadPacientes == 0)
 	{

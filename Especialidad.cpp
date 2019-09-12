@@ -16,7 +16,7 @@ Especialidad::~Especialidad()
 {
 	for (int i = 0; i < 10; i++)
 	{
-		delete especialidades[i];
+		delete especialidades;
 	}
 	delete especialidades;
 }
@@ -35,13 +35,13 @@ string Especialidad::getEspecialidades()
 
 void Especialidad::cambiarEspecialidadEnPosicion(int posicion, string _especialidad)
 {
-	if (posicion = < 10 && posicion >= 1)
+	if (posicion <= 10 && posicion >= 1)
 		especialidades[posicion - 1] = _especialidad;
 }
 
 string Especialidad::getEspecialidadEnPosicion(int posicion)
 {
-	if (posicion = < 10 && posicion >= 1)
+	if (posicion <= 10 && posicion >= 1)
 		return especialidades[posicion - 1];
 }
 
@@ -52,7 +52,7 @@ string Especialidad::toStringEspecialidades()
 	reporte << "Lista de especialidades:" << endl;
 	for (int i = 0; i < 10; i++)
 	{
-		reporte << "[" << i+1 << "]:" << especialidades[i] << endl;
+		reporte << "[" << i + 1 << "]:" << especialidades[i] << endl;
 	}
 	return reporte.str();
 }

@@ -7,15 +7,15 @@ class Cama {
 private:
 	string codigo;
 	bool disponibilidad;
-	Paciente *paciente;
+	Paciente* paciente;
 public:
 	Cama();
-	Cama(string _codigo, Paciente* _paciente,bool disponible);
+	Cama(string _codigo, Paciente* _paciente, bool disponible);
 	~Cama();
-	
+
 	void setDisponibilidad(bool _disponibilidad);
 	void setCodigo(string _codigo);
-	void setPaciente(Paciente *_paciente);
+	void setPaciente(Paciente* _paciente);
 	string getCodigo();
 	bool isDisponibilidad();
 	Paciente getPaciente();

@@ -15,11 +15,12 @@ class Medico
 {
 private:
 	string nombre;
+	int cantidad;
 	Especialidad especialidad;
 	vector<Paciente*> paciente;
 public:
 	Medico();
-	Medico(string nombre, Especialidad _especialidad );
+	Medico(string nombre, Especialidad _especialidad);
 	~Medico();
 	void setNombre(string _nombre);
 	void setEspecialidad(Especialidad);

@@ -4,21 +4,21 @@ Cama::Cama()
 {
 	codigo = "NULL";
 	disponibilidad = true;
-	*paciente = new Paciente();
+	paciente = new Paciente();
 }
 
-Cama::Cama(string _codigo, Paciente* _paciente,bool disponible){
+Cama::Cama(string _codigo, Paciente* _paciente, bool disponible) {
 
 	codigo = _codigo;
 	disponibilidad = disponible;
-	*paciente = _paciente;
+	_paciente = new Paciente;
 }
 
 Cama::~Cama()
 {
 	codigo = "NULL";
 	disponibilidad = true;
-	delete *paciente;
+	delete paciente;
 }
 
 void Cama::setDisponibilidad(bool _disponibilidad)
@@ -33,7 +33,7 @@ void Cama::setCodigo(string _codigo)
 
 void Cama::setPaciente(Paciente* _paciente)
 {
-	*pacitente = _paciente;
+	paciente = _paciente;
 }
 
 string Cama::getCodigo()
@@ -51,7 +51,7 @@ Paciente Cama::getPaciente()
 	return *paciente;
 }
 
-void Cama::asignarLetraPabellon(){
+void Cama::asignarLetraPabellon() {
 
 
 
