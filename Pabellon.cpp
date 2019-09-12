@@ -42,7 +42,16 @@ Cama Pabellon::getPabellon()
 
 char Pabellon::vereficarGeneroPabellon()
 {
-	return 0;
+	for (int i = 0; i < fila; i++) {
+		for (int j = 0; j < colum; j++) {
+			if (pabellon[i][j] == "M") {
+				return M;
+			}
+			else {
+				return F;
+			}
+		}
+	}
 }
 
 bool Pabellon::hayDisponibilidad()
@@ -52,7 +61,7 @@ bool Pabellon::hayDisponibilidad()
 
 int Pabellon::totalDisponibilidad()
 {
-	return 0;
+	
 }
 
 void Pabellon::cambiarPacienteCama()

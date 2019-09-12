@@ -53,6 +53,8 @@ Paciente Cama::getPaciente()
 
 void Cama::asignarLetraPabellon(){
 
+
+
 }
 
 string Cama::toStringCama()
