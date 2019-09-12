@@ -5,10 +5,12 @@
 
 class Pabellon {
 private:
-	Cama** pabellon;
+	int fila;
+	int colum;
+	Cama*** pabellon;
 public:
 	Pabellon();
-	Pabellon(Cama*);
+	Pabellon(int,int);
 	~Pabellon();
 
 	void setPabellon(Cama*);
