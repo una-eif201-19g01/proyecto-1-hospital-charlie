@@ -58,7 +58,7 @@ string Medico::reporteMedico()
 	stringstream _reporte;
 	int cantidadPacientes = paciente.size();
 
-	_reporte << "Nombre del medico: " << getNombre() << "\n" << "Especialidad: " /*IMPLEMENTAR*/ << endl;
+	_reporte << "Nombre del medico: " << getNombre() << "\n" << "Especialidad: "<<getEspecialidad<< endl;
 
 	if (cantidadPacientes == 0)
 	{

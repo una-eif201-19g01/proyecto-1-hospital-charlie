@@ -66,6 +66,8 @@ do {
 		std::cout << "  2.Datos doctor    ";
 		std::cout << "  2.Eliminar Doctor";
 
+
+
 		break
 	case 2:
 		std::cout << "  Menú Paciente";
