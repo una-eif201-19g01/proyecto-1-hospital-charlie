@@ -82,7 +82,7 @@ do {
 		cout << " Pabellones";
 		cout << "tostring";
 	case 4:
-		cou << "camas";
+		cout << "camas";
 		cout << "tostring";
 	case 5:
 		std::cout << "Hasta Luego.\n";
