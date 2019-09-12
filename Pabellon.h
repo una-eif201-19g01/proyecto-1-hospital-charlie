@@ -10,17 +10,16 @@ private:
 	Cama*** pabellon;
 public:
 	Pabellon();
-	Pabellon(int, int, Cama***);
+	Pabellon(int,int,cama*);
 	~Pabellon();
 
-	void setPabellon(Cama** _cama);
+	void setPabellon(string);
 	Cama getPabellon();
-	void setCamaEnPosicion(Cama* cama, int fila, int _columna);
 
 	char vereficarGeneroPabellon();
-	bool hayDisponibilidad();
+	bool hayDisponibilidad();	
 	int totalDisponibilidad();
-	void cambiarPacienteCama(Paciente*);
+	void cambiarPacienteCama(paciente*);
 	string toStringPabellon();
 };
 
