@@ -103,16 +103,15 @@ string Pabellon::toStringPabellon()
 {
 	stringstream _reporte
 
-		_reporte << "Pbellon" << endl;
+		_reporte << "Pabellon" << endl;
 	for (int i = 0; i < fila; i++) {
 		for (int j = 0; j < colum; j++) {
 			reporte << pabellon[i][j] << endl;
 
-
+		}
+	}
 
 	return _reporte.str();
 }
 
 
-
-}
