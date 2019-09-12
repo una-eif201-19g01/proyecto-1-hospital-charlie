@@ -72,8 +72,8 @@ do {
 		std::cout << "  ====================================\n";
 		std::cout << "  1.Ingresar Paciente ";
 		std::cout << "   2.Imprimir Paciente";
-		std::cout << "cambiar la cama";
-		std::cout << "  3.Eliminar Doctor";
+		std::cout << "	 3.cambiar la cama";
+		std::cout << "  4.Dar de alta paciente";
 
 
 		break;
