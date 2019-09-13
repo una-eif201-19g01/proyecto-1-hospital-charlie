@@ -6,13 +6,13 @@ Pabellon::Pabellon()
 	colum = 20;
 }
 
-Pabellon::Pabellon(int f,int c,cama*cama)
+Pabellon::Pabellon(int f, int c, Cama* Pabellon)
 {
 	fila = f;
 	colum = c;
-	pabellon = new cama **[fila];
+	pabellon = new Cama * *[fila];
 	for (int i = 0; i < fila; i++) {
-		pabellon[i] = new cama * [colum];
+		pabellon[i] = new Cama * [colum];
 	}
 }
 
@@ -32,13 +32,16 @@ Pabellon::~Pabellon()
 
 }
 
-void Pabellon::setPabellon(Cama**_cama)
+void Pabellon::setPabellon(Cama** _cama)
 {
 	for (int i = 0; i < fila; i++)
 		for (int j = 0; j < colum; j++)
 		{
-			pabellon[i][j] = **_cama;
+			pabellon[i][j] = *_cama;
 		}
+	for (int i = 0; i < fila; i++) {
+		pabellon[i] = _cama;
+	}
 }
 
 Cama Pabellon::getPabellon()
@@ -50,11 +53,11 @@ char Pabellon::vereficarGeneroPabellon()
 {
 	for (int i = 0; i < fila; i++) {
 		for (int j = 0; j < colum; j++) {
-			if (pabellon[i][j]->getPaciente()->getGeneroPaciente() == "M") {
-				return M;
+			if (pabellon[i][j]->getPaciente().getGeneroPaciente() == 'M') {
+				return 'M';
 			}
 			else {
-				return F;
+				return 'F';
 			}
 		}
 	}
@@ -77,7 +80,7 @@ bool Pabellon::hayDisponibilidad()
 
 int Pabellon::totalDisponibilidad()
 {
-	int contador;
+	int contador = 0;
 
 	for (int i = 0; i < fila; i++) {
 		for (int j = 0; j < colum; j++) {
@@ -88,25 +91,25 @@ int Pabellon::totalDisponibilidad()
 	return contador;
 }
 
-void Pabellon::setCamaEnPosicion(Cama* cama, int fila, int _columna)
+void Pabellon::setCamaEnPosicion(Cama* _cama, int _fila, int _columna)
 {
-	if (fila < fila && columna < colum)
+	if (_fila < fila && _columna < colum)
 		pabellon[_fila][_columna] = _cama;
 }
 
-void Pabellon::cambiarPacienteCama()
+void Pabellon::cambiarPacienteCama(Paciente*)
 {
 }
 
 string Pabellon::toStringPabellon()
 
 {
-	stringstream _reporte
+	stringstream _reporte;
 
-		_reporte << "Pabellon" << endl;
+	_reporte << "Pabellon" << endl;
 	for (int i = 0; i < fila; i++) {
 		for (int j = 0; j < colum; j++) {
-			reporte << pabellon[i][j] << endl;
+			_reporte << pabellon[i][j] << endl;
 
 		}
 	}

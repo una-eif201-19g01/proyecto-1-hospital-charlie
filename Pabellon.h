@@ -1,8 +1,7 @@
-#ifndef PABELLON_H
 #define PABELLON_H
 
 #include "Cama.h"
-
+#include "Paciente.h"
 class Pabellon {
 private:
 	int fila;
@@ -10,16 +9,16 @@ private:
 	Cama*** pabellon;
 public:
 	Pabellon();
-	Pabellon(int,int,cama*);
+	Pabellon(int, int, Cama*);
 	~Pabellon();
 
-	void setPabellon(string);
+	void setPabellon(Cama**);
 	Cama getPabellon();
-
+	void setCamaEnPosicion(Cama*, int, int);
 	char vereficarGeneroPabellon();
-	bool hayDisponibilidad();	
+	bool hayDisponibilidad();
 	int totalDisponibilidad();
-	void cambiarPacienteCama(paciente*);
+	void cambiarPacienteCama(Paciente*);
 	string toStringPabellon();
 };
 
