@@ -9,7 +9,7 @@ private:
 	Cama*** pabellon;
 public:
 	Pabellon();
-	Pabellon(int, int, Cama*);
+	Pabellon(int, int, Cama***);
 	~Pabellon();
 
 	void setPabellon(Cama**);

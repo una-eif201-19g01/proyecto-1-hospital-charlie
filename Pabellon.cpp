@@ -4,15 +4,19 @@ Pabellon::Pabellon()
 {
 	fila = 10;
 	colum = 20;
-}
-
-Pabellon::Pabellon(int f, int c, Cama* Pabellon)
-{
-	fila = f;
-	colum = c;
 	pabellon = new Cama * *[fila];
 	for (int i = 0; i < fila; i++) {
 		pabellon[i] = new Cama * [colum];
+	}
+}
+
+Pabellon::Pabellon(int f, int c, Cama*** _pabellon)
+{
+	fila = f;
+	colum = c;
+	_pabellon = new Cama * *[fila];
+	for (int i = 0; i < fila; i++) {
+		_pabellon[i] = new Cama * [colum];
 	}
 }
 
@@ -65,7 +69,7 @@ char Pabellon::vereficarGeneroPabellon()
 
 bool Pabellon::hayDisponibilidad()
 {
-	bool disponible;
+	bool disponible = false;
 
 	for (int i = 0; i < fila; i++) {
 		for (int j = 0; j < colum; j++) {
@@ -116,5 +120,6 @@ string Pabellon::toStringPabellon()
 
 	return _reporte.str();
 }
+
 
 
