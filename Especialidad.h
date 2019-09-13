@@ -17,6 +17,7 @@ public:
 
 	void setEspecialidades(string _especialidad);
 	string getEspecialidades();
+	int getCantidadEspecialidad();
 
 	void cambiarEspecialidadEnPosicion(int posicion, string _especialidad);
 	string getEspecialidadEnPosicion(int posicion);

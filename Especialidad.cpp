@@ -3,7 +3,7 @@
 Especialidad::Especialidad()
 {
 	for (int i = 0; i < 10; i++)
-		especialidades[i] = "TBA";
+		especialidades[i] = "null";
 }
 
 Especialidad::Especialidad(string _especialidad)
@@ -31,6 +31,23 @@ string Especialidad::getEspecialidades()
 {
 	for (int i = 0; i < 10; i++)
 		return especialidades[i];
+}
+
+int Especialidad::getCantidadEspecialidad()
+{
+	int cantidad = 0;
+
+	for (int i = 0; i < 10; i++)
+	{
+		if (especialidades[i] == "null") {
+			cantidad;
+		}
+		else {
+			cantidad++;
+		}
+
+	}
+	return cantidad;
 }
 
 void Especialidad::cambiarEspecialidadEnPosicion(int posicion, string _especialidad)
