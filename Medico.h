@@ -16,16 +16,16 @@ class Medico
 private:
 	string nombre;
 	int cantidad;
-	Especialidad especialidad;
+	string especialidad;
 	vector<Paciente*> paciente;
 public:
 	Medico();
-	Medico(string nombre, Especialidad _especialidad);
+	Medico(string nombre, string _especialidad);
 	~Medico();
 	void setNombre(string _nombre);
-	void setEspecialidad(Especialidad);
+	void setEspecialidad(string);
 	string getNombre();
-	Especialidad getEspecialidad();
+	string getEspecialidad();
 	void agregarPaciente(Paciente*);
 	Paciente getPacientes();
 	string reporteMedico();

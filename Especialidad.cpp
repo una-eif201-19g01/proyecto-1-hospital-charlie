@@ -2,23 +2,24 @@
 
 Especialidad::Especialidad()
 {
+	cantidad = 0;
 	for (int i = 0; i < 10; i++)
 		especialidades[i] = "null";
 }
 
 Especialidad::Especialidad(string _especialidad)
 {
+	cantidad = 0;
 	for (int i = 0; i < 10; i++)
+	{
 		especialidades[i] = _especialidad;
+		cantidad++;
+	}
 }
 
 Especialidad::~Especialidad()
 {
-	for (int i = 0; i < 10; i++)
-	{
-		delete especialidades;
-	}
-	delete especialidades;
+	//delete[] especialidades;
 }
 
 void Especialidad::setEspecialidades(string _especialidad)
@@ -35,14 +36,9 @@ string Especialidad::getEspecialidades()
 
 int Especialidad::getCantidadEspecialidad()
 {
-	int cantidad = 0;
-
 	for (int i = 0; i < 10; i++)
 	{
-		if (especialidades[i] == "null") {
-			cantidad;
-		}
-		else {
+		if (especialidades[i] != "null") {
 			cantidad++;
 		}
 
@@ -67,10 +63,15 @@ void Especialidad::cambiarEspecialidadEnPosicion(int posicion, string _especiali
 		especialidades[posicion - 1] = _especialidad;
 }
 
+void Especialidad::setEspecialidadEnPosicion(int posicion, string _especialidad)
+{
+	especialidades[posicion] = _especialidad;
+}
+
 string Especialidad::getEspecialidadEnPosicion(int posicion)
 {
-	if (posicion <= 10 && posicion >= 1)
-		return especialidades[posicion - 1];
+	//if (posicion > 0 && posicion >= 0)
+		return especialidades[posicion];
 }
 
 string Especialidad::toStringEspecialidades()
@@ -80,7 +81,7 @@ string Especialidad::toStringEspecialidades()
 	reporte << "Lista de especialidades:" << endl;
 	for (int i = 0; i < 10; i++)
 	{
-		reporte << "[" << i + 1 << "]:" << especialidades[i] << endl;
+		reporte << "[" << i + 1 << "]:" << getEspecialidadEnPosicion(i) << endl;
 	}
 	return reporte.str();
 }

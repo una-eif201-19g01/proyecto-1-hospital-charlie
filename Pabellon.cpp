@@ -97,7 +97,7 @@ int Pabellon::totalDisponibilidad()
 
 void Pabellon::setCamaEnPosicion(Cama* _cama, int _fila, int _columna)
 {
-	if (_fila < fila && _columna < colum)
+	//if (_fila < fila && _columna < colum)
 		pabellon[_fila][_columna] = _cama;
 }
 

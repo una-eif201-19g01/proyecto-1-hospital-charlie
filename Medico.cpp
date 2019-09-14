@@ -6,7 +6,7 @@ Medico::Medico()
 
 }
 
-Medico::Medico(string nombre, Especialidad _especialidad) {
+Medico::Medico(string nombre, string _especialidad) {
 	this->nombre = nombre;
 	especialidad = _especialidad;
 	cantidad = 0;
@@ -26,11 +26,11 @@ string Medico::getNombre()
 {
 	return nombre;
 }
-void Medico::setEspecialidad(Especialidad _especialidad) {
+void Medico::setEspecialidad(string _especialidad) {
 	especialidad = _especialidad;
 }
 
-Especialidad Medico::getEspecialidad() {
+string Medico::getEspecialidad() {
 	return especialidad;
 }
 /*
@@ -61,7 +61,7 @@ string Medico::reporteMedico()
 	stringstream _reporte;
 	int cantidadPacientes = paciente.size();
 
-	_reporte << "Nombre del medico: " << getNombre() << "\n" << "Especialidad: " << especialidad.getEspecialidades() << endl;
+	_reporte << "Nombre del medico: " << getNombre() << "\n" << "Especialidad: " << getEspecialidad() << endl;
 
 	if (cantidadPacientes == 0)
 	{
@@ -69,7 +69,7 @@ string Medico::reporteMedico()
 	}
 	else
 	{
-		_reporte << "El medico " << getNombre() << "tiene asignados los siguientes pacientes: \n\n";
+		_reporte << "El medico " << getNombre() << " tiene asignados los siguientes pacientes: \n\n";
 
 		for (int i = 0; i < cantidadPacientes; i++)
 		{

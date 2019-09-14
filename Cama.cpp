@@ -11,7 +11,7 @@ Cama::Cama(string _codigo, Paciente* _paciente, bool disponible) {
 
 	codigo = _codigo;
 	disponibilidad = disponible;
-	_paciente = new Paciente;
+	paciente= _paciente;
 }
 
 Cama::~Cama()
