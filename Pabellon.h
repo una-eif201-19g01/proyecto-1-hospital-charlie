@@ -1,3 +1,4 @@
+#ifndef PABELLON_H
 #define PABELLON_H
 
 #include "Cama.h"
@@ -9,7 +10,7 @@ private:
 	Cama*** pabellon;
 public:
 	Pabellon();
-	Pabellon(int, int, Cama***);
+	Pabellon(int, int);
 	~Pabellon();
 
 	void setPabellon(Cama**);

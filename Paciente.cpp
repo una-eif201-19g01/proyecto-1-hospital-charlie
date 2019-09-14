@@ -112,7 +112,15 @@ void Paciente::setGeneroPaciente(char _generoPaciente)
 }
 
 std::string Paciente::reportePaciente() {
-	string reporte;
-	reporte = "\n Reporte de los paciente: [" + getEstadoPaciente(); +"]: ";
-	return reporte;
+	stringstream reporte;
+	reporte << "Reporte de Paciente:" << endl << endl;
+	reporte << "Nombre: " << getNombre() << endl;
+	reporte << "Cedula: " << getCedula() << endl;
+	reporte << "Direccion: " << getDireccion() << endl;
+	reporte << "Patologia: " << getPatologia() << endl;
+	reporte << "Tipo de Cirugia: " << getTipoCirugia() << endl;
+	reporte << "Prioridad del paciente: " << getPrioridadPaciente() << endl;
+	reporte << "Genero: " << getGeneroPaciente() << endl;
+
+	return reporte.str();
 }

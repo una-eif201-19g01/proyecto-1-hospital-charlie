@@ -50,6 +50,17 @@ int Especialidad::getCantidadEspecialidad()
 	return cantidad;
 }
 
+string Especialidad::buscarEspecialidad(string _especialidad)
+{
+	string __especialidad= "No existe especialidad";
+	for (int i = 0; i < 10; i++)
+	{
+		if (especialidades[i] == _especialidad)
+			__especialidad=especialidades[i];
+	}
+	return __especialidad;
+}
+
 void Especialidad::cambiarEspecialidadEnPosicion(int posicion, string _especialidad)
 {
 	if (posicion <= 10 && posicion >= 1)

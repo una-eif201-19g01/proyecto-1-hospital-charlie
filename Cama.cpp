@@ -65,6 +65,11 @@ string Cama::toStringCama()
 	if (isDisponibilidad() == false)
 	{
 		reporte << "Paciente: " << paciente->getNombre() << endl;
+		reporte << "Estado: " << endl;
+		if (paciente->getEstadoPaciente())
+			cout << "En el Hospital." << endl;
+		else
+			cout << "Paciente dado de alta." << endl;
 	}
 	else
 		reporte << "Cama desocupada." << endl;

@@ -15,6 +15,7 @@
 using namespace std;
 class Interfaz {
 public:
+
 	void menu();
 
 	void menuDoctor();

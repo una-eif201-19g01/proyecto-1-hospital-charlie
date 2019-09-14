@@ -10,13 +10,13 @@ Pabellon::Pabellon()
 	}
 }
 
-Pabellon::Pabellon(int f, int c, Cama*** _pabellon)
+Pabellon::Pabellon(int f, int c)
 {
 	fila = f;
 	colum = c;
-	_pabellon = new Cama * *[fila];
+	pabellon = new Cama * *[fila];
 	for (int i = 0; i < fila; i++) {
-		_pabellon[i] = new Cama * [colum];
+		pabellon[i] = new Cama * [colum];
 	}
 }
 
@@ -43,14 +43,14 @@ void Pabellon::setPabellon(Cama** _cama)
 		{
 			pabellon[i][j] = *_cama;
 		}
-	for (int i = 0; i < fila; i++) {
+	/*for (int i = 0; i < fila; i++) {
 		pabellon[i] = _cama;
-	}
+	}*/
 }
 
 Cama Pabellon::getPabellon()
 {
-	return Cama();
+	return ***pabellon;
 }
 
 char Pabellon::vereficarGeneroPabellon()
@@ -110,16 +110,17 @@ string Pabellon::toStringPabellon()
 {
 	stringstream _reporte;
 
-	_reporte << "Pabellon" << endl;
+	_reporte << "Pabellon: " << endl;
 	for (int i = 0; i < fila; i++) {
 		for (int j = 0; j < colum; j++) {
-			_reporte << pabellon[i][j] << endl;
-
+			_reporte << pabellon[i][j]->getCodigo() << endl;
+			_reporte << pabellon[i][j]->getPaciente().getNombre() << endl;
+			if (pabellon[i][j]->isDisponibilidad())
+				_reporte << "Disponible" << endl;
+			else
+				_reporte << "No disponible" << endl;
 		}
 	}
-
+	
 	return _reporte.str();
 }
-
-
-
